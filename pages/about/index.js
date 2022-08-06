@@ -30,7 +30,7 @@ export default function About() {
                 <div>
                     <Typography variant='h1' color="primary" maxHeight="fit-content" marginBottom="5rem">About me</Typography>
                     <Typography variant='h6' color="primary" marginBottom="2.5rem"> Hi, I'm <strong>Dylan</strong>—a <strong>Computer Engineering</strong> student at the <strong>University of Toronto</strong></Typography>
-                    <Typography variant='h6' color="primary">testestest</Typography>
+                    <Typography variant='h6' color="primary">testestesttest</Typography>
                 </div>
             </Box>
         </ThemeProvider>
