@@ -21,10 +21,14 @@ a {
   z-index: 1;
 }
 
-.grow:hover {
-  animation: grow 1s ease-in-out;
-  animation-fill-mode: forwards; 
+.grow {
+  display: none;
+  animation: grow 2s infinite ease-in-out; 
   z-index: 1;
+}
+
+.letter {
+  font-size: 2rem;
 }
 
 #__next {
@@ -41,6 +45,39 @@ a {
   }
 }
 
+
+@media only screen and (min-width:360px) {
+  .letter {
+    font-size: 3.4rem;
+  }
+
+  .grow {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:720px) {
+  .letter {
+    font-size: 7rem;
+  }
+
+  .grow {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:1140px) {
+  .letter {
+    font-size: 10rem;
+  }
+
+  .grow {
+    display: block;
+  }
+}
+
+
+
 @keyframes rotating {
   from {
     transform: origin;
@@ -52,7 +89,14 @@ a {
 }
 
 @keyframes grow {
-  to {
-    opacity: 0.9;
+  0% {
+    font-size: initial;
   }
+  50% {
+    font-size: 1.2rem;
+  }
+  100% {
+    font-size: initial;
+  }
+
 }
