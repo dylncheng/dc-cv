@@ -1,3 +1,7 @@
+.container {
+    padding: 2rem
+}
+
 .contact ul{
     display: flex;
     justify-content: space-around;

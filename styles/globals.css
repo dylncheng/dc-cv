@@ -23,7 +23,7 @@ a {
 
 .grow {
   display: none;
-  animation: grow 2s infinite ease-in-out; 
+  /* animation: grow 2s infinite ease-in-out;  */
   z-index: 1;
 }
 
