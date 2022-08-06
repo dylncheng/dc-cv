@@ -1,0 +1,20 @@
+.contact ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 30vh 20%;
+    padding-top:0;
+    min-width: 60%;
+}
+
+.contact ul li a {
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.contact ul li a:hover {
+    font-weight: 900;
+    color: #e0afa0;
+    font-size: 2rem;
+}
