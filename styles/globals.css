@@ -16,7 +16,13 @@ a {
 }
 
 .char-rotate {
-  animation: rotating 10s infinite;
+  animation: rotating 40s infinite linear;
+  animation-fill-mode: forwards; 
+  z-index: 1;
+}
+
+.grow:hover {
+  animation: grow 1s ease-in-out;
   animation-fill-mode: forwards; 
   z-index: 1;
 }
@@ -36,7 +42,17 @@ a {
 }
 
 @keyframes rotating {
+  from {
+    transform: origin;
+  }
+
   to {
-    transform: rotate(360deg);
+    transform: rotate(719.9deg);
+  }
+}
+
+@keyframes grow {
+  to {
+    opacity: 0.9;
   }
 }
