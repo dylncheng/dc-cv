@@ -29,9 +29,9 @@ export default function Contact() {
             <Box  className={styles['contact']} width="100%" height="100%" minHeight="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
                 <Typography variant="h1" color="primary">Links</Typography>
                 <ul>
-                    <li className="email"><Typography variant='h6' color='secondary'><a href={"mailto:chengdylan02@gmail.com"} target="_blank">email</a></Typography></li>
-                    <li className="linkedin"><Typography variant='h6' color='secondary'><a href={"https://linkedin.com/in/dylnchng"} target="_blank">linkedin</a></Typography></li>
-                    <li className="github"><Typography variant='h6' color='secondary'><a href={"https://github.com/dylncheng"} target="_blank">github</a></Typography></li>
+                    <li className="email"><Typography variant='h6' color='secondary'><a href={"mailto:chengdylan02@gmail.com"} target="_blank" rel="noreferrer">email</a></Typography></li>
+                    <li className="linkedin"><Typography variant='h6' color='secondary'><a href={"https://linkedin.com/in/dylnchng"} target="_blank" rel="noreferrer">linkedin</a></Typography></li>
+                    <li className="github"><Typography variant='h6' color='secondary'><a href={"https://github.com/dylncheng"} target="_blank" rel="noreferrer">github</a></Typography></li>
                 </ul>
             </Box>
         </ThemeProvider>

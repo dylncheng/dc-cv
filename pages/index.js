@@ -87,7 +87,6 @@ export default function Home() {
                   transform: titleHover?`rotate(${360*Math.log(1 + animationTime/ANIMATION_DURATION + positionArr[index][0]*0.7)}deg)`:'initial',
                   opacity: `${0.90 - (animationTime/ANIMATION_DURATION)*0.8}`,
                   color: '#f4f3ee',
-                  // "animation-play-state": hoverArr[index]==='hoverOn'?'running':'paused'
                 }}
               >
                 {char}
