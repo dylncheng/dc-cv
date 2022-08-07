@@ -98,20 +98,20 @@ export default function Home() {
             !titleHover && <Typography display="block" justifySelf="flex-start" color="primary"><span className='grow'>{"<---- hover to start"}</span></Typography>
           }
           <ThemeProvider theme={theme}>
-            <Box position='absolute' top='65%' left='20%' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
-              <Button className={styles['home-link']} variant='outlined' color='primary'>
+            <Box position='absolute' top='65%' left='20%'>
+              <Button className={styles['home-link']} variant='outlined' color='primary' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
                 Projects
               </Button>
             </Box>
-            <Box position='absolute' top='45%' right='20%' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
-              <Button className={styles['home-link']} variant='outlined' color='primary'>
+            <Box position='absolute' top='45%' right='20%'>
+              <Button className={styles['home-link']} variant='outlined' color='primary' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
                 <Link href="/contact">
                   Contact
                 </Link>
               </Button>
             </Box>
-            <Box position='absolute' top='25%' left='30%' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
-              <Button className={styles['home-link']} variant='outlined' color='primary'>
+            <Box position='absolute' top='25%' left='30%'>
+              <Button className={styles['home-link']} variant='outlined' color='primary' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
                 <Link href="/about">
                   About
                 </Link>
@@ -154,3 +154,5 @@ export default function Home() {
 </Typography> */}
 
 // height={titleHover?'100%':'fit-content'} display={titleHover?'flex':'block'} alignItems='center' justifyContent='center'
+
+// visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}
