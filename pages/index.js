@@ -1,5 +1,6 @@
 import { Typography, Box, Button } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ArrowDropUp, ArrowUpward, Straight } from '@mui/icons-material';
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link';
@@ -97,31 +98,38 @@ export default function Home() {
               )
             })
           }
-          {
-            !titleHover && <Typography display="block" justifySelf="flex-start" color="primary"><span className='grow'>{"<---- hover to start"}</span></Typography>
-          }
-          <ThemeProvider theme={theme}>
-            <Box position='absolute' top='65%' left='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
-              <Button className={styles['home-link']} variant='outlined' color='primary'>
-                Projects
-              </Button>
-            </Box>
-            <Box position='absolute' top='45%' right='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
-              <Button className={styles['home-link']} variant='outlined' color='primary'>
-                <Link href="/contact">
-                  Contact
-                </Link>
-              </Button>
-            </Box>
-            <Box position='absolute' top='25%' left='30%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
-              <Button className={styles['home-link']} variant='outlined' color='primary'>
-                <Link href="/about">
-                  About
-                </Link>
-              </Button>
-            </Box>
-          </ThemeProvider>
         </Box>
+        {
+          !titleHover && 
+          <>
+            <Straight sx={{position:"absolute", top:"54.5vh", color:"#f4f3ee"}}></Straight>
+            <Typography position="absolute" top="57.5vh" color="#f4f3ee" fontFamily='Bogart' fontWeight={500}><span className='grow desktop'>{"hover to start"}</span></Typography>
+            <Typography position="absolute" top="57.5vh" color="#f4f3ee" fontFamily='Bogart' fontWeight={500}><span className='grow mobile'>{"tap to start"}</span></Typography>
+          </>
+        }
+        <ThemeProvider theme={theme}>
+          <Box position='absolute' top='65%' left='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+            <Button className={styles['home-link']} variant='outlined' color='primary'>
+              <Link href="/projects">
+                  Projects
+              </Link>
+            </Button>
+          </Box>
+          <Box position='absolute' top='45%' right='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+            <Button className={styles['home-link']} variant='outlined' color='primary'>
+              <Link href="/contact">
+                Contact
+              </Link>
+            </Button>
+          </Box>
+          <Box position='absolute' top='25%' left='30%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+            <Button className={styles['home-link']} variant='outlined' color='primary'>
+              <Link href="/about">
+                About
+              </Link>
+            </Button>
+          </Box>
+        </ThemeProvider>
       </main>
 
       {/* <footer className={styles.footer}>

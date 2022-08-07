@@ -57,6 +57,7 @@ export default function Projects() {
                             justifyContent: "space-between"
                         }}
                     >
+                        <Typography variant="h1" color="primary"> Projects</Typography>
                         {
                             data.projects.map((project, index) => {
                                 return(
@@ -66,6 +67,7 @@ export default function Projects() {
                                             height:"70vh",
                                             marginBottom:'10vh',
                                             background: "linear-gradient(338.83deg,#f2e9e4 -3.41%,#ccb7ae,#f2e9e4 52.31%)",
+                                            borderRadius: '10px'
                                         }} 
                                         // raised={true}
                                         key={index}
