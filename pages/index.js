@@ -99,19 +99,19 @@ export default function Home() {
           }
           <ThemeProvider theme={theme}>
             <Box position='absolute' top='65%' left='20%'>
-              <Button className={styles['home-link']} variant='outlined' color='primary' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
+              <Button className={styles['home-link']} variant='outlined' color='primary' sx={{visibility:((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}}>
                 Projects
               </Button>
             </Box>
             <Box position='absolute' top='45%' right='20%'>
-              <Button className={styles['home-link']} variant='outlined' color='primary' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
+              <Button className={styles['home-link']} variant='outlined' color='primary' sx={{visibility:((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}}>
                 <Link href="/contact">
                   Contact
                 </Link>
               </Button>
             </Box>
             <Box position='absolute' top='25%' left='30%'>
-              <Button className={styles['home-link']} variant='outlined' color='primary' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
+              <Button className={styles['home-link']} variant='outlined' color='primary' sx={{visibility:((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}}>
                 <Link href="/about">
                   About
                 </Link>
