@@ -12,6 +12,12 @@ let introArr = intro.split('')
 let positionArr = [];
 let hoverArr = {};
 
+for(let i=0; i < introArr.length; i++) {
+  let randY = Math.random() > 0.5?-1:1;
+  let randX = Math.random() > 0.5?-1:1;
+  positionArr.push([Math.random()*100*randY, Math.random()*100*randX]);
+}
+
 const ANIMATION_DURATION = 8;
 
 const theme = createTheme({
@@ -30,11 +36,6 @@ export default function Home() {
   const handleTitleHover = (index) => {
     if(!index) {
       setTitleHover(true);
-      for(let i=0; i < introArr.length; i++) {
-        let randY = Math.random() > 0.5?-1:1;
-        let randX = Math.random() > 0.5?-1:1;
-        positionArr.push([Math.random()*100*randY, Math.random()*100*randX]);
-      }
     } else {
       if((animationTime/ANIMATION_DURATION) > 0.4) {
         hoverArr[index] = 'hoverOn';
@@ -87,6 +88,8 @@ export default function Home() {
                   transform: titleHover?`rotate(${360*Math.log(1 + animationTime/ANIMATION_DURATION + positionArr[index][0]*0.7)}deg)`:'initial',
                   opacity: `${0.85 - (animationTime/ANIMATION_DURATION)*0.8}`,
                   color: '#f4f3ee',
+                  fontFamily: 'Bogart',
+                  fontWeight: 900
                 }}
               >
                 {char}
@@ -98,20 +101,20 @@ export default function Home() {
             !titleHover && <Typography display="block" justifySelf="flex-start" color="primary"><span className='grow'>{"<---- hover to start"}</span></Typography>
           }
           <ThemeProvider theme={theme}>
-            <Box position='absolute' top='65%' left='20%'>
-              <Button className={styles['home-link']} variant='outlined' color='primary' sx={{visibility:((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}}>
+            <Box position='absolute' top='65%' left='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+              <Button className={styles['home-link']} variant='outlined' color='primary'>
                 Projects
               </Button>
             </Box>
-            <Box position='absolute' top='45%' right='20%'>
-              <Button className={styles['home-link']} variant='outlined' color='primary' sx={{visibility:((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}}>
+            <Box position='absolute' top='45%' right='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+              <Button className={styles['home-link']} variant='outlined' color='primary'>
                 <Link href="/contact">
                   Contact
                 </Link>
               </Button>
             </Box>
-            <Box position='absolute' top='25%' left='30%'>
-              <Button className={styles['home-link']} variant='outlined' color='primary' sx={{visibility:((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}}>
+            <Box position='absolute' top='25%' left='30%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+              <Button className={styles['home-link']} variant='outlined' color='primary'>
                 <Link href="/about">
                   About
                 </Link>
@@ -154,5 +157,3 @@ export default function Home() {
 </Typography> */}
 
 // height={titleHover?'100%':'fit-content'} display={titleHover?'flex':'block'} alignItems='center' justifyContent='center'
-
-// visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}

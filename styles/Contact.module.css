@@ -7,9 +7,9 @@
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    padding: 0 20%;
+    padding: 0 12.5%;
     padding-top:0;
-    min-width: 70%;
+    min-width: 75%;
 }
 
 .contact ul li a {

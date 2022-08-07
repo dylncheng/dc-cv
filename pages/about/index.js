@@ -1,9 +1,10 @@
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Grid } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Head from "next/head";
 import Image from "next/image";
 import HomeButton from "../../components/HomeButton";
+import styles from "../../styles/About.module.css"
 
 const theme = createTheme({
     palette: {
@@ -20,13 +21,13 @@ const theme = createTheme({
     fontWeight: '600',
     opacity: '0.7',
     [theme.breakpoints.up('xs')]: {
-      fontSize: '3.4rem'
+      fontSize: '3.2rem'
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: '7rem',
+      fontSize: '6.5rem',
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: '10rem',
+      fontSize: '9rem',
     },
 
   };
@@ -52,15 +53,27 @@ export default function About() {
               <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
               <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main>
+            <main className={styles.main}>
               <HomeButton></HomeButton>
-              <Box width="100%" height="100%" minHeight="100vH" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-                <Typography variant='h1' color="primary" maxHeight="fit-content" marginBottom="5rem">About me</Typography>
-                <Box display="flex" flexDirection="column">
-                  <Typography variant='h6' color="primary" marginBottom="2.5rem"> Hi, I&apos;m <strong>Dylan</strong>—a <strong>Computer Engineering</strong> student at the <strong>University of Toronto</strong></Typography>
-                </Box>
-                <Image src='/me.jpeg' height="665" width="500"></Image>
-                <Typography>{aboutObj.aboutThisWebsite}</Typography>
+              <Box width="80%" height="100%">
+                <Grid container spacing={4}>
+                  <Grid container spacing={4} xs={12} justifyContent='center'>
+                    <Grid container sm={5} xs={12} flexDirection='column' alignItems='center'>
+                      <Grid item>
+                        <Typography variant='h1' color="primary" maxHeight="fit-content" marginBottom="2rem" textAlign="left">About me</Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography variant='h6' color="primary" marginBottom="2.5rem" textAlign="left"> Hi, I&apos;m <strong>Dylan</strong>—a <strong>Computer Engineering</strong> student at the <strong>University of Toronto</strong></Typography>
+                      </Grid>
+                      <Grid>
+                        <Typography textAlign="center">{aboutObj.aboutThisWebsite}</Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid item sm={4.5} xs={12} textAlign="right">
+                      <Image src='/me.jpeg' layout="responsive" height="332.5" width="250" style={{height:'auto', width:'10vw'}}></Image>
+                    </Grid>
+                  </Grid>
+                </Grid>
               </Box>
             </main>
         </ThemeProvider>

@@ -1,0 +1,21 @@
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('/font-files/bogart-black-trial-webfont.woff2') format('woff2'),
+         url('/font-files/bogart-black-trial-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('/font-files/fobogart-medium-trial-webfont.woff2') format('woff2'),
+         url('/font-files/bogart-medium-trial-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
