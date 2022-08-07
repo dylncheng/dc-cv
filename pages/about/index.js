@@ -31,6 +31,17 @@ const theme = createTheme({
 
   };
 
+const aboutObj = {
+  aboutThisWebsite: "This current website was built with Next.js using React and Material UI.\n " +
+  "The design concept was minimalism-focused like most of my projects, but was centered around this one animation I had in mind before fallng asleep one time.\n" +
+  "I'm not a beginner in React animations, but most of my projects included linear, or predictical movements of elements in two degrees of freedom.\n" + 
+  "My basic idea was that I was going to have some text that explodes in different directions on hover/press. \n" + 
+  "As terrible and traumatizing as it was, the first thing I thought of to achieve this design was linear algebra. \n" + 
+  "As for the effect of exploding letters, at the time I didn't expect to be writing a log-log function to model the behaviour I wanted. \n" +
+  "Nevertheless, my effort in building a pure React hopefully paid off. Some extra things I didn't write about: (pseudo-random position generation & animation timing)\n"
+
+}
+
 export default function About() {
 
     return(
@@ -49,6 +60,7 @@ export default function About() {
                   <Typography variant='h6' color="primary" marginBottom="2.5rem"> Hi, I&apos;m <strong>Dylan</strong>—a <strong>Computer Engineering</strong> student at the <strong>University of Toronto</strong></Typography>
                 </Box>
                 <Image src='/me.jpeg' height="665" width="500"></Image>
+                <Typography>{aboutObj.aboutThisWebsite}</Typography>
               </Box>
             </main>
         </ThemeProvider>

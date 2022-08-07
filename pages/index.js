@@ -98,19 +98,19 @@ export default function Home() {
             !titleHover && <Typography display="block" justifySelf="flex-start" color="primary"><span className='grow'>{"<---- hover to start"}</span></Typography>
           }
           <ThemeProvider theme={theme}>
-            <Box position='absolute' top='65%' left='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+            <Box position='absolute' top='65%' left='20%' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
               <Button className={styles['home-link']} variant='outlined' color='primary'>
                 Projects
               </Button>
             </Box>
-            <Box position='absolute' top='45%' right='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+            <Box position='absolute' top='45%' right='20%' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
               <Button className={styles['home-link']} variant='outlined' color='primary'>
                 <Link href="/contact">
                   Contact
                 </Link>
               </Button>
             </Box>
-            <Box position='absolute' top='25%' left='30%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+            <Box position='absolute' top='25%' left='30%' visibility={((animationTime/ANIMATION_DURATION) < 0.15)?'hidden':'visible'}>
               <Button className={styles['home-link']} variant='outlined' color='primary'>
                 <Link href="/about">
                   About
