@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Head from "next/head";
 import data from "../../data";
 import styles from "../../styles/Projects.module.css"
+import HomeButton from "../../components/HomeButton";
 
 const theme = createTheme({
     palette: {
@@ -34,7 +35,7 @@ const theme = createTheme({
 
   theme.typography.h4 = {
     fontFamily: 'Bogart',
-    fontWeight: 500
+    fontWeight: 600
   }
 
 export default function Projects() {
@@ -48,6 +49,7 @@ export default function Projects() {
             </Head>
             <main className={styles['main']}>
                 <ThemeProvider theme={theme}>
+                    <HomeButton></HomeButton>
                     <Box 
                         sx={{
                             width:"90%" ,
@@ -73,7 +75,7 @@ export default function Projects() {
                                         key={index}
                                     >
                                         <CardContent>
-                                            <Typography variant="h4" color="secondary" textAlign={'right'} fontWeight={700}>
+                                            <Typography variant="h4" color="secondary" textAlign={'right'}>
                                                 {project.name}
                                             </Typography>
                                             <Box maxWidth="80%" maxHeight="60%" display="block">

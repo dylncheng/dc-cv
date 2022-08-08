@@ -39,7 +39,7 @@ const aboutObj = {
   "My basic idea was that I was going to have some text that explodes in different directions on hover/press. \n" + 
   "As terrible and traumatizing as it was, the first thing I thought of to achieve this design was linear algebra. \n" + 
   "As for the effect of exploding letters, at the time I didn't expect to be writing a log-log function to model the behaviour I wanted. \n" +
-  "Nevertheless, my effort in building a pure React hopefully paid off. Some extra things I didn't write about: (pseudo-random position generation & animation timing)\n"
+  "Nevertheless, my effort in building a pure React animation hopefully paid off. Some extra things I didn't write about: (pseudo-random position generation & animation timing)\n"
 
 }
 
