@@ -26,6 +26,11 @@ a {
   display: none;
   /* animation: grow 2s infinite ease-in-out;  */
   z-index: 1;
+  position: absolute;
+  top: 57.5vh;
+  color: #f4f3ee; 
+  font-family: 'Bogart';
+  font-weight: 500;
 }
 
 .letter {

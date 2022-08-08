@@ -34,16 +34,22 @@ export default function Home() {
   const [titleHover, setTitleHover] = useState(false);
   const [animationTime, setAnimationTime] = useState(0);
 
-  const handleTitleHover = (index) => {
-    if(!index) {
-      setTitleHover(true);
-    } else {
-      if((animationTime/ANIMATION_DURATION) > 0.4) {
-        hoverArr[index] = 'hoverOn';
-      }
-    } 
-
+  const handleTitleHover = () => {
+    setTitleHover(true);
   }
+
+  useEffect(() => {
+    if(window.sessionStorage.getItem('positionArr')) {
+      positionArr = JSON.parse(window.sessionStorage.getItem('positionArr'));
+    } else {
+      window.sessionStorage.setItem('positionArr', JSON.stringify(positionArr));
+    }
+
+    if(JSON.parse(window.sessionStorage.getItem('titleHover'))) {
+      setTitleHover(JSON.parse(window.sessionStorage.getItem('titleHover')));
+      setAnimationTime(JSON.parse(window.sessionStorage.getItem('animationTime')));
+    }
+  }, [])
 
   useEffect(() => {
     let delay = null;
@@ -55,6 +61,9 @@ export default function Home() {
       clearTimeout(delay);
       console.log("animation done!")
     }
+
+    window.sessionStorage.setItem('titleHover', JSON.stringify(titleHover));
+    window.sessionStorage.setItem('animationTime', JSON.stringify(animationTime))
     
   }, [titleHover, animationTime])
 
@@ -75,7 +84,7 @@ export default function Home() {
                 <h1 
                 key={index}
                 className={titleHover?"char-rotate letter":'letter'}
-                onMouseEnter={!titleHover?()=>handleTitleHover(null):()=>handleTitleHover(index)}
+                onMouseEnter={!titleHover?()=>handleTitleHover():null}
                 onMouseLeave={() => hoverArr[index] = null}
                 style={{
                   display:titleHover?'inline-block':'inline', 
@@ -103,8 +112,8 @@ export default function Home() {
           !titleHover && 
           <>
             <Straight sx={{position:"absolute", top:"54.5vh", color:"#f4f3ee"}}></Straight>
-            <Typography position="absolute" top="57.5vh" color="#f4f3ee" fontFamily='Bogart' fontWeight={500}><span className='grow desktop'>{"hover to start"}</span></Typography>
-            <Typography position="absolute" top="57.5vh" color="#f4f3ee" fontFamily='Bogart' fontWeight={500}><span className='grow mobile'>{"tap to start"}</span></Typography>
+            <Typography ><span className='grow desktop'>{"hover to start"}</span></Typography>
+            <Typography ><span className='grow mobile'>{"tap to start"}</span></Typography>
           </>
         }
         <ThemeProvider theme={theme}>
