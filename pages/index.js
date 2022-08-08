@@ -111,7 +111,7 @@ export default function Home() {
         {
           !titleHover && 
           <>
-            <Straight sx={{position:"absolute", top:"54.5vh", color:"#f4f3ee"}}></Straight>
+            <Straight sx={{position:"absolute", top:"58vh", color:"#f4f3ee"}}></Straight>
             <Typography ><span className='grow desktop'>{"hover to start"}</span></Typography>
             <Typography ><span className='grow mobile'>{"tap to start"}</span></Typography>
           </>

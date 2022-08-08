@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Bogart';
+  src: url('/font-files/bogart-black-trial-webfont.woff2') format('woff2'),
+       url('/font-files/bogart-black-trial-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Bogart';
+  src: url('/font-files/fobogart-medium-trial-webfont.woff2') format('woff2'),
+       url('/font-files/bogart-medium-trial-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+
+}
+
 html,
 body {
   padding: 0;
@@ -27,10 +45,17 @@ a {
   /* animation: grow 2s infinite ease-in-out;  */
   z-index: 1;
   position: absolute;
-  top: 57.5vh;
+  top: 63vh;
+  left: 0;
+  right: 0;
   color: #f4f3ee; 
   font-family: 'Bogart';
+  text-align: center;
   font-weight: 500;
+}
+
+.mobile {
+  display: block;
 }
 
 .letter {
