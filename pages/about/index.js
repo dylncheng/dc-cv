@@ -70,10 +70,10 @@ export default function About() {
             </Head>
             <main className={styles.main}>
               <HomeButton></HomeButton>
-              <Box width="80%" height="100%">
-                <Grid container justifyContent="center">
-                  <Grid container xs={12} justifyContent='center'>
-                    <Grid container sm={5} xs={12} flexDirection='column'>
+              <Box maxWidth="80%" height="100%">
+                <Grid container rowSpacing={5} justifyContent="center">
+                  <Grid container item xs={12} justifyContent='center'>
+                    <Grid container item lg={4} sm={6} xs={12} flexDirection='column' justifyContent={{xl:'center'}}>
                       <Grid item>
                         <Typography variant='h1' color="primary" maxHeight="fit-content">About me</Typography>
                       </Grid>
@@ -81,11 +81,11 @@ export default function About() {
                         <Typography variant='h6' color="secondary" marginBottom="2.5rem" textAlign={{xs:'center', sm:'left'}}> Hi, I&apos;m <strong>Dylan</strong>—a <strong>Computer Engineering</strong> student at the <strong>University of Toronto</strong></Typography>
                       </Grid>
                     </Grid>
-                    <Grid item sm={5} xs={12} textAlign="right">
-                      <Image src={me} layout="intrinsic" height="532" width="400"></Image>
+                    <Grid item xl={3} lg={4} sm={6} xs={12} textAlign="right">
+                      <Image src={me} layout="intrinsic" height="532" width="400" style={{borderRadius: '10px'}}></Image>
                     </Grid>
                   </Grid>
-                  <Grid container xs={12} justifyContent="center">
+                  <Grid container item xl={9} xs={12} justifyContent="center">
                     <Grid item xs={9.5}>
                       {/* <Typography textAlign="center">{aboutObj.aboutThisWebsite}</Typography> */}
                       <Typography textAlign="left" color="secondary">{aboutObj.aboutMe}</Typography>
