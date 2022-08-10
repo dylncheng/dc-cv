@@ -91,10 +91,10 @@ export default function About() {
                       <Image src={me} layout="intrinsic" height="532" width="400" style={{borderRadius: '10px'}}></Image>
                     </Grid>
                   </Grid>
-                  <Grid container item xl={9} xs={12} justifyContent="center">
-                    <Grid item xs={9.5}>
+                  <Grid container item xl={7} lg={8} sm={12} xs={12} justifyContent="center">
+                    <Grid item>
                       {/* <Typography textAlign="center">{aboutObj.aboutThisWebsite}</Typography> */}
-                      <Typography textAlign="left" color="secondary" fontSize="1.2rem" lineHeight="2.3rem">{aboutObj.aboutMe}</Typography>
+                      <Typography textAlign={{ xs:'center', sm:'left'}} color="secondary" fontSize="1.2rem" lineHeight="2.3rem">{aboutObj.aboutMe}</Typography>
                     </Grid>
 
                   </Grid>
