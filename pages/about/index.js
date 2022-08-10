@@ -1,7 +1,7 @@
 import { Typography, Box, Grid } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { fontFamily } from "@mui/system";
+import { fontFamily, fontWeight } from "@mui/system";
 import Head from "next/head";
 import Image from "next/image";
 import me from "../../public/me.jpeg"
@@ -41,8 +41,14 @@ const theme = createTheme({
 
   theme.typography.h6 = {
     fontFamily: 'Bogart',
-    fontWeight: 400,
+    fontWeight: 300,
     fontSize: '1.5rem',
+  }
+
+  theme.typography.strong = {
+    color: '#f4f3ee',
+    fontWeight: 700,
+    fontFamily: 'Bogart'
   }
 
 const aboutObj = {
@@ -53,8 +59,8 @@ const aboutObj = {
   "As terrible and traumatizing as it was, the first thing I thought of to achieve this design was linear algebra. \n" + 
   "As for the effect of exploding letters, at the time I didn't expect to be writing a log-log function to model the behaviour I wanted. \n" +
   "Nevertheless, my effort in building a pure React animation hopefully paid off. Some extra things I didn't write about: (pseudo-random position generation & animation timing)\n",
-  aboutMe: "I'm a fullstack developer with experience developing with Javascript, Python, React, and Node." +
-  "I enjoy spending time learning how to use new technology (this website was create with Next.js!) and playing music in my spare time!"
+  aboutMe: "I'm a fullstack developer with experience developing web applications with Javascript, Python, React, and Node. " +
+  "I enjoy spending time learning how to use new technology (this website was created with Next.js!) and playing music in my spare time."
 
 }
 
@@ -73,12 +79,12 @@ export default function About() {
               <Box maxWidth="80%" height="100%">
                 <Grid container rowSpacing={5} justifyContent="center">
                   <Grid container item xs={12} justifyContent='center'>
-                    <Grid container item lg={4} sm={6} xs={12} flexDirection='column' justifyContent={{xl:'center'}}>
+                    <Grid container item lg={4} sm={6} xs={12} flexDirection='column' justifyContent={{ xs:'center' }}>
                       <Grid item>
                         <Typography variant='h1' color="primary" maxHeight="fit-content">About me</Typography>
                       </Grid>
                       <Grid item>
-                        <Typography variant='h6' color="secondary" marginBottom="2.5rem" textAlign={{xs:'center', sm:'left'}}> Hi, I&apos;m <strong>Dylan</strong>—a <strong>Computer Engineering</strong> student at the <strong>University of Toronto</strong></Typography>
+                        <Typography variant='h6' color="secondary" marginBottom="2.5rem" textAlign={{xs:'center', sm:'left'}}> Hi, I&apos;m <Typography variant="strong">Dylan</Typography>—a <Typography variant="strong">Computer Engineering</Typography> student at the <Typography variant="strong">University of Toronto</Typography></Typography>
                       </Grid>
                     </Grid>
                     <Grid item xl={3} lg={4} sm={6} xs={12} textAlign="right">
@@ -88,7 +94,7 @@ export default function About() {
                   <Grid container item xl={9} xs={12} justifyContent="center">
                     <Grid item xs={9.5}>
                       {/* <Typography textAlign="center">{aboutObj.aboutThisWebsite}</Typography> */}
-                      <Typography textAlign="left" color="secondary">{aboutObj.aboutMe}</Typography>
+                      <Typography textAlign="left" color="secondary" fontSize="1.2rem" lineHeight="2.3rem">{aboutObj.aboutMe}</Typography>
                     </Grid>
 
                   </Grid>
