@@ -24,7 +24,7 @@ const ANIMATION_DURATION = 8;
 const theme = createTheme({
   palette: {
     primary: {
-      main:'#f4f3ee'
+      main:'#f4f3ee',
     },
   },
 })

@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { Box, Card, CardContent, Typography } from "@mui/material"
+import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material"
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Head from "next/head";
 import data from "../../data";
 import styles from "../../styles/Projects.module.css"
 import HomeButton from "../../components/HomeButton";
+import { fontSize } from "@mui/system";
 
 const theme = createTheme({
     palette: {
@@ -33,9 +34,10 @@ const theme = createTheme({
   
   };
 
-  theme.typography.h4 = {
+  theme.typography.h3 = {
     fontFamily: 'Bogart',
-    fontWeight: 600
+    fontWeight: 500,
+    fontSize: '1.7rem'
   }
 
 export default function Projects() {
@@ -50,6 +52,7 @@ export default function Projects() {
             <main className={styles['main']}>
                 <ThemeProvider theme={theme}>
                     <HomeButton></HomeButton>
+           
                     <Box 
                         sx={{
                             width:"90%" ,
@@ -74,19 +77,27 @@ export default function Projects() {
                                         // raised={true}
                                         key={index}
                                     >
+                                        <CardHeader 
+                                            title={project.name} 
+                                            titleTypographyProps=
+                                            {{
+                                                variant:"h3",
+                                                color:"secondary",
+                                                textAlign:'right'
+
+                                            }}
+                                        >
+                                        </CardHeader>
                                         <CardContent>
-                                            <Typography variant="h4" color="secondary" textAlign={'right'}>
-                                                {project.name}
-                                            </Typography>
-                                            <Box maxWidth="80%" maxHeight="60%" display="block">
-                                                <Image 
-                                                    src={project.image} 
-                                                    layout="responsive"
-                                                    placeholder="blur"
-                                                    loading="lazy"
-                                                    sizes="50vw"
-                                                >
-                                                </Image>
+                                            <Box maxHeight="80%" display="flex" flexDirection='column' alignContent="center">
+                                                <Box maxWidth="80%" display="block">
+                                                    <Image 
+                                                        src={project.image} 
+                                                        placeholder="blur"
+                                                        loading="lazy"
+                                                    >
+                                                    </Image>
+                                                </Box>
                                             </Box>
                                         </CardContent>
                                     </Card>

@@ -1,8 +1,10 @@
 import { Typography, Box, Grid } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { fontFamily } from "@mui/system";
 import Head from "next/head";
 import Image from "next/image";
+import me from "../../public/me.jpeg"
 import HomeButton from "../../components/HomeButton";
 import styles from "../../styles/About.module.css"
 
@@ -20,17 +22,28 @@ const theme = createTheme({
   theme.typography.h1 = {
     fontWeight: '600',
     opacity: '0.7',
+    fontFamily: 'Bogart',
     [theme.breakpoints.up('xs')]: {
-      fontSize: '3.2rem'
+      fontSize: '3.2rem',
+      textAlign: 'center'
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: '6.5rem',
+      fontSize: '4.5rem',
+      textAlign: 'left'
+
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: '9rem',
+      fontSize: '7rem',
+      textAlign: 'left'
     },
 
   };
+
+  theme.typography.h6 = {
+    fontFamily: 'Bogart',
+    fontWeight: 400,
+    fontSize: '1.5rem',
+  }
 
 const aboutObj = {
   aboutThisWebsite: "This current website was built with Next.js using React and Material UI.\n " +
@@ -39,7 +52,9 @@ const aboutObj = {
   "My basic idea was that I was going to have some text that explodes in different directions on hover/press. \n" + 
   "As terrible and traumatizing as it was, the first thing I thought of to achieve this design was linear algebra. \n" + 
   "As for the effect of exploding letters, at the time I didn't expect to be writing a log-log function to model the behaviour I wanted. \n" +
-  "Nevertheless, my effort in building a pure React animation hopefully paid off. Some extra things I didn't write about: (pseudo-random position generation & animation timing)\n"
+  "Nevertheless, my effort in building a pure React animation hopefully paid off. Some extra things I didn't write about: (pseudo-random position generation & animation timing)\n",
+  aboutMe: "I'm a fullstack developer with experience developing with Javascript, Python, React, and Node." +
+  "I enjoy spending time learning how to use new technology (this website was create with Next.js!) and playing music in my spare time!"
 
 }
 
@@ -56,22 +71,26 @@ export default function About() {
             <main className={styles.main}>
               <HomeButton></HomeButton>
               <Box width="80%" height="100%">
-                <Grid container spacing={4}>
-                  <Grid container spacing={4} xs={12} justifyContent='center'>
-                    <Grid container sm={5} xs={12} flexDirection='column' alignItems='center'>
+                <Grid container justifyContent="center">
+                  <Grid container xs={12} justifyContent='center'>
+                    <Grid container sm={5} xs={12} flexDirection='column'>
                       <Grid item>
-                        <Typography variant='h1' color="primary" maxHeight="fit-content" marginBottom="2rem" textAlign="left">About me</Typography>
+                        <Typography variant='h1' color="primary" maxHeight="fit-content">About me</Typography>
                       </Grid>
                       <Grid item>
-                        <Typography variant='h6' color="primary" marginBottom="2.5rem" textAlign="left"> Hi, I&apos;m <strong>Dylan</strong>—a <strong>Computer Engineering</strong> student at the <strong>University of Toronto</strong></Typography>
-                      </Grid>
-                      <Grid>
-                        <Typography textAlign="center">{aboutObj.aboutThisWebsite}</Typography>
+                        <Typography variant='h6' color="secondary" marginBottom="2.5rem" textAlign={{xs:'center', sm:'left'}}> Hi, I&apos;m <strong>Dylan</strong>—a <strong>Computer Engineering</strong> student at the <strong>University of Toronto</strong></Typography>
                       </Grid>
                     </Grid>
-                    <Grid item sm={4.5} xs={12} textAlign="right">
-                      <Image src='/me.jpeg' layout="responsive" height="332.5" width="250" style={{height:'auto', width:'10vw'}}></Image>
+                    <Grid item sm={5} xs={12} textAlign="right">
+                      <Image src={me} layout="intrinsic" height="532" width="400"></Image>
                     </Grid>
+                  </Grid>
+                  <Grid container xs={12} justifyContent="center">
+                    <Grid item xs={9.5}>
+                      {/* <Typography textAlign="center">{aboutObj.aboutThisWebsite}</Typography> */}
+                      <Typography textAlign="left" color="secondary">{aboutObj.aboutMe}</Typography>
+                    </Grid>
+
                   </Grid>
                 </Grid>
               </Box>
