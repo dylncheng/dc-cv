@@ -36,7 +36,7 @@ const theme = createTheme({
 
   theme.typography.h3 = {
     fontFamily: 'Bogart',
-    fontWeight: 500,
+    fontWeight: 400,
     fontSize: '1.7rem'
   }
 
@@ -68,7 +68,7 @@ export default function Projects() {
                                 return(
                                     <Card 
                                         sx={{
-                                            width:"65vw", 
+                                            width:"55vw", 
                                             height:"70vh",
                                             marginBottom:'10vh',
                                             // background: "linear-gradient(338.83deg,#f2e9e4 -3.41%,#ccb7ae,#f2e9e4 52.31%)",
@@ -91,14 +91,17 @@ export default function Projects() {
                                         >
                                         </CardHeader>
                                         <CardContent>
-                                            <Box maxHeight="80%" display="flex" flexDirection='column' alignContent="center">
-                                                <Box maxWidth="80%" display="block">
-                                                    <Image 
-                                                        src={project.image} 
-                                                        placeholder="blur"
-                                                        loading="lazy"
-                                                    >
-                                                    </Image>
+                                            <Box display="flex" flexDirection='column' alignItems="center">
+                                                <Box maxWidth="80%" display="flex" justifyContent="center">
+                                                    <div>
+                                                        <Image 
+                                                            src={project.image} 
+                                                            placeholder="blur"
+                                                            loading="lazy"
+                                                            objectFit="cover"
+                                                        >
+                                                        </Image>
+                                                    </div>
                                                 </Box>
                                             </Box>
                                         </CardContent>
