@@ -59,7 +59,6 @@ export default function Home() {
       }, 4)
     else if(titleHover) {
       clearTimeout(delay);
-      console.log("animation done!")
     }
 
     window.sessionStorage.setItem('titleHover', JSON.stringify(titleHover));
