@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import { Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { GitHub, LinkedIn, MailOutline }from '@mui/icons-material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import styles from '../../styles/Contact.module.css'
@@ -45,13 +45,26 @@ export default function Contact() {
           <main>
             <div className={styles['container']}>
               <HomeButton></HomeButton>
-              <Box  className={styles['contact']} width="100%" height="100%" minHeight="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+              <Box className={styles['contact']} width="100%" height="100%" minHeight="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
                   <Typography variant="h1" color="primary">Links</Typography>
-                  <ul>
+                  <Grid container maxWidth="40%" justifyContent="center">
+                    <Grid container item xs={12} spacing={1} justifyContent="space-around">
+                      <Grid item xs={4} textAlign="center">
+                        <Typography variant='h6' color='secondary'><a href={"mailto:chengdylan02@gmail.com"} target="_blank" rel="noreferrer"><MailOutline fontSize="large"></MailOutline></a></Typography>
+                      </Grid>
+                      <Grid item xs={4} textAlign="center">
+                        <Typography variant='h6' color='secondary'><a href={"https://linkedin.com/in/dylnchng"} target="_blank" rel="noreferrer"><LinkedIn fontSize="large"></LinkedIn></a></Typography>
+                      </Grid>
+                      <Grid item xs={4} textAlign="center">
+                        <Typography variant='h6' color='secondary'><a href={"https://github.com/dylncheng"} target="_blank" rel="noreferrer"><GitHub fontSize="large"></GitHub></a></Typography>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                  {/* <ul>
                       <li className="email"><Typography variant='h6' color='secondary'><a href={"mailto:chengdylan02@gmail.com"} target="_blank" rel="noreferrer"><MailOutline fontSize="large"></MailOutline></a></Typography></li>
                       <li className="linkedin"><Typography variant='h6' color='secondary'><a href={"https://linkedin.com/in/dylnchng"} target="_blank" rel="noreferrer"><LinkedIn fontSize="large"></LinkedIn></a></Typography></li>
                       <li className="github"><Typography variant='h6' color='secondary'><a href={"https://github.com/dylncheng"} target="_blank" rel="noreferrer"><GitHub fontSize="large"></GitHub></a></Typography></li>
-                  </ul>
+                  </ul> */}
               </Box>
             </div>
           </main>

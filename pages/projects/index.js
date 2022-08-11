@@ -71,7 +71,9 @@ export default function Projects() {
                                             width:"65vw", 
                                             height:"70vh",
                                             marginBottom:'10vh',
-                                            background: "linear-gradient(338.83deg,#f2e9e4 -3.41%,#ccb7ae,#f2e9e4 52.31%)",
+                                            // background: "linear-gradient(338.83deg,#f2e9e4 -3.41%,#ccb7ae,#f2e9e4 52.31%)",
+                                            background: "#58524d",
+                                            raised: false,
                                             borderRadius: '10px'
                                         }} 
                                         // raised={true}
