@@ -19,7 +19,6 @@ const theme = createTheme({
 
 theme.typography.h1 = {
   fontWeight: '900',
-  opacity: '0.7',
   fontFamily:'Bogart',
   [theme.breakpoints.up('xs')]: {
     fontSize: '3.4rem'
