@@ -21,7 +21,6 @@ const theme = createTheme({
 
   theme.typography.h1 = {
     fontWeight: '600',
-    opacity: '0.7',
     fontFamily: 'Bogart',
     [theme.breakpoints.up('xs')]: {
       fontSize: '3.2rem',
@@ -80,19 +79,19 @@ export default function About() {
                 <Grid container rowSpacing={5} justifyContent="center">
                   <Grid container item xs={12} justifyContent='center'>
                     <Grid container item lg={4} sm={6} xs={12} flexDirection='column' justifyContent={{ xs:'center' }}>
-                      <Grid item>
+                      <Grid item className={styles['title']}>
                         <Typography variant='h1' color="primary" maxHeight="fit-content">About me</Typography>
                       </Grid>
-                      <Grid item>
+                      <Grid item className={styles['subtitle']}>
                         <Typography variant='h6' color="secondary" marginBottom="2.5rem" textAlign={{xs:'center', sm:'left'}}> Hi, I&apos;m <Typography variant="strong">Dylan</Typography>—a <Typography variant="strong">Computer Engineering</Typography> student at the <Typography variant="strong">University of Toronto</Typography></Typography>
                       </Grid>
                     </Grid>
-                    <Grid item xl={3} lg={4} sm={6} xs={12} textAlign="right">
+                    <Grid item className={styles['photo']} xl={3} lg={4} sm={6} xs={12} textAlign="right">
                       <Image src={me} layout="intrinsic" height="532" width="400" style={{borderRadius: '10px'}}></Image>
                     </Grid>
                   </Grid>
                   <Grid container item xl={7} lg={8} sm={12} xs={12} justifyContent="center">
-                    <Grid item>
+                    <Grid item className={styles['description']}>
                       {/* <Typography textAlign="center">{aboutObj.aboutThisWebsite}</Typography> */}
                       <Typography textAlign={{ xs:'center', sm:'left'}} color="secondary" fontSize="1.2rem" lineHeight="2.3rem">{aboutObj.aboutMe}</Typography>
                     </Grid>
