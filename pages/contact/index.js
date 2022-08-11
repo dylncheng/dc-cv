@@ -46,8 +46,8 @@ export default function Contact() {
             <div className={styles['container']}>
               <HomeButton></HomeButton>
               <Box className={styles['contact']} width="100%" height="100%" minHeight="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-                  <Typography variant="h1" color="primary">Links</Typography>
-                  <Grid container maxWidth="40%" justifyContent="center">
+                  <Typography variant="h1" color="primary" className={styles['title']}>Links</Typography>
+                  <Grid container maxWidth="40%" justifyContent="center" className={styles['links']}>
                     <Grid container item xs={12} spacing={1} justifyContent="space-around">
                       <Grid item xs={4} textAlign="center">
                         <Typography variant='h6' color='secondary'><a href={"mailto:chengdylan02@gmail.com"} target="_blank" rel="noreferrer"><MailOutline fontSize="large"></MailOutline></a></Typography>
