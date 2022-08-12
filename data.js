@@ -50,17 +50,17 @@ let data = {
             github:"https://github.com/dylncheng/productivity-app",
             link: "https://devpost.com/software/zen-mo"
         },
-        {
-            name: "Algorithm Visualization",
-            description: "easter egg :)",
-            image: '',
-            link: "/projects/algorithm-visualization"
-        }
+        // {
+        //     name: "Algorithm Visualization",
+        //     description: "easter egg :)",
+        //     image: '',
+        //     link: "/projects/algorithm-visualization"
+        // }
     ]
 };
 
 const algorithms = {
-    sorting: ["insertion", "bubble sort"],
+    sorting: ["insertion"],
     // pathfinding: ["dijkstra", "a* search algorithm", "d* algorithm"]
 }
 

@@ -36,7 +36,7 @@ const Landing = () => {
 
 
     return(
-        <div className="App">
+        <main style={{height:'100vh'}}>
             <HomeButton></HomeButton>
             <div className="algorithms">
                 <Nav algorithm={sortingChecked?algorithms.sorting:algorithms.pathfinding} handleSortClick={handleSortClick}/>
@@ -48,7 +48,7 @@ const Landing = () => {
                     {/* <li><a href="#" onClick={pathfindingHandler} style={{opacity: `${pathfindingOpacity}`}}>pathfinding</a></li> */}
                 </ul>
             </div>
-        </div>
+        </main>
     );
 }
 

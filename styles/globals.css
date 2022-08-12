@@ -181,10 +181,10 @@ a.reset{
   transition: all 0.3s ease;
 
   display: block;
-  position: relative;
-  top: 40%;
-  margin: 0 auto;
-  max-width: 20%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
 }
 
 #__next {
