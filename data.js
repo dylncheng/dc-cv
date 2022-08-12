@@ -60,7 +60,7 @@ let data = {
 };
 
 const algorithms = {
-    sorting: ["insertion"],
+    sorting: ["insertion sort"],
     // pathfinding: ["dijkstra", "a* search algorithm", "d* algorithm"]
 }
 

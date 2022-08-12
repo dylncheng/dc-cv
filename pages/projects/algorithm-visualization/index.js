@@ -42,14 +42,15 @@ const Landing = () => {
                 <Nav algorithm={sortingChecked?algorithms.sorting:algorithms.pathfinding} handleSortClick={handleSortClick}/>
                 <Algorithms algorithm={algorithm} start={start} setStart={setStart}/>
             </div>
-            <div className="description">
-                <ul className="radio">
-                    <li><a href="#" onClick={sortingHandler} style={{opacity: `${sortingOpacity}`}}>sorting</a></li>
-                    {/* <li><a href="#" onClick={pathfindingHandler} style={{opacity: `${pathfindingOpacity}`}}>pathfinding</a></li> */}
-                </ul>
-            </div>
         </main>
     );
 }
 
 export default Landing;
+
+{/* <div className="description">
+    <ul className="radio">
+        <li><a href="#" onClick={sortingHandler} style={{opacity: `${sortingOpacity}`}}>sorting</a></li>
+        <li><a href="#" onClick={pathfindingHandler} style={{opacity: `${pathfindingOpacity}`}}>pathfinding</a></li>
+    </ul>
+</div> */}

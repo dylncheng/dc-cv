@@ -121,7 +121,7 @@ const Algorithms = ({algorithm, start, setStart}) => {
                     );
                 })}
             </div>
-            <a className="reset" href="#" onClick={handleReset} style={{textAlign:'center'}}>Reset</a>
+            <a className="reset" href="#" onClick={handleReset} style={{textAlign:'center', margin: '0.5rem'}}>Reset</a>
         </>
         
     );
