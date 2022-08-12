@@ -172,17 +172,16 @@ a.reset {
   align-items: flex-end;
   position: relative;
   margin: 0 10%;
-  top: 30%;
+  top: 20%;
 }
 
 a.reset{
   background-color: #282c34;
   border-radius: 20px;
   transition: all 0.3s ease;
-
   display: block;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 0;
   right: 0;
 }
