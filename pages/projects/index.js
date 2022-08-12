@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material"
+import { Box, Card, CardContent, CardHeader, Grid, Typography } from "@mui/material"
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Head from "next/head";
-import data from "../../data";
+import { data } from "../../data";
 import styles from "../../styles/Projects.module.css"
 import HomeButton from "../../components/HomeButton";
 import { fontSize } from "@mui/system";
@@ -52,8 +52,11 @@ export default function Projects() {
             <main className={styles['main']}>
                 <ThemeProvider theme={theme}>
                     <HomeButton></HomeButton>
+                    <Typography variant="h1" color="primary"> Projects</Typography>
            
-                    <Box 
+                    <Grid 
+                        container
+                        rowSpacing={11}
                         sx={{
                             width:"90%" ,
                             display: "flex",
@@ -62,54 +65,59 @@ export default function Projects() {
                             justifyContent: "space-between"
                         }}
                     >
-                        <Typography variant="h1" color="primary"> Projects</Typography>
                         {
                             data.projects.map((project, index) => {
                                 return(
-                                    <Card 
-                                        sx={{
-                                            width:"55vw", 
-                                            height:"70vh",
-                                            marginBottom:'10vh',
-                                            // background: "linear-gradient(338.83deg,#f2e9e4 -3.41%,#ccb7ae,#f2e9e4 52.31%)",
-                                            background: "#58524d",
-                                            raised: false,
-                                            borderRadius: '10px'
-                                        }} 
-                                        // raised={true}
-                                        key={index}
-                                    >
-                                        <CardHeader 
-                                            title={project.name} 
-                                            titleTypographyProps=
-                                            {{
-                                                variant:"h3",
-                                                color:"secondary",
-                                                textAlign:'right'
+                                    <Grid key={index} container item xs={12} justifyContent="center">
+                                        <Grid item xl={9} lg={10} md={11} sm={12}>
+                                            <Card 
+                                                sx={{
+                                                    // width:"55vw", 
+                                                    height:"100%",
+                                                    // width:'100%',
+                                                    // marginBottom:'10vh',
+                                                    // background: "linear-gradient(338.83deg,#f2e9e4 -3.41%,#ccb7ae,#f2e9e4 52.31%)",
+                                                    background: "#58524d",
+                                                    raised: false,
+                                                    borderRadius: '10px'
+                                                }} 
+                                                // raised={true}
+                                            >
+                                                <CardHeader 
+                                                    title={project.name} 
+                                                    titleTypographyProps=
+                                                    {{
+                                                        variant:"h3",
+                                                        color:"secondary",
+                                                        textAlign:'right'
 
-                                            }}
-                                        >
-                                        </CardHeader>
-                                        <CardContent>
-                                            <Box display="flex" flexDirection='column' alignItems="center">
-                                                <Box maxWidth="80%" display="flex" justifyContent="center">
-                                                    <div>
-                                                        <Image 
-                                                            src={project.image} 
-                                                            placeholder="blur"
-                                                            loading="lazy"
-                                                            objectFit="cover"
-                                                        >
-                                                        </Image>
-                                                    </div>
-                                                </Box>
-                                            </Box>
-                                        </CardContent>
-                                    </Card>
+                                                    }}
+                                                >
+                                                </CardHeader>
+                                                <CardContent>
+                                                    <Box display="flex" flexDirection='column' alignItems="center">
+                                                        <Box maxWidth="90%" display="flex" justifyContent="center">
+                                                            <div>
+                                                                <a href={project.link} target="_blank" rel="noreferrer">
+                                                                    <Image 
+                                                                        src={project.image} 
+                                                                        placeholder="blur"
+                                                                        loading="lazy"
+                                                                        objectFit="cover"
+                                                                    >
+                                                                    </Image>
+                                                                </a>
+                                                            </div>
+                                                        </Box>
+                                                    </Box>
+                                                </CardContent>
+                                            </Card>
+                                        </Grid>
+                                    </Grid>
                                 )
                             })
                         }
-                    </Box>
+                    </Grid>
                 </ThemeProvider>
             </main>
         </>

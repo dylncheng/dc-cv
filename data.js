@@ -4,6 +4,7 @@ import recipe from './public/recipe.png'
 import spacestagram from './public/spacestagram-landing.png'
 import mapper from './public/mapper.png'
 import chess from './public/chess.png'
+import { isNullishCoalesce } from 'typescript'
 
 let data = {
     projects:  [
@@ -48,8 +49,19 @@ let data = {
             image: zm1,
             github:"https://github.com/dylncheng/productivity-app",
             link: "https://devpost.com/software/zen-mo"
+        },
+        {
+            name: "Algorithm Visualization",
+            description: "easter egg :)",
+            image: '',
+            link: "/projects/algorithm-visualization"
         }
     ]
 };
 
-export default data;
+const algorithms = {
+    sorting: ["insertion", "bubble sort"],
+    // pathfinding: ["dijkstra", "a* search algorithm", "d* algorithm"]
+}
+
+export {data, algorithms};
