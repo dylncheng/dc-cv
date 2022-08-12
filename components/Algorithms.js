@@ -8,7 +8,7 @@ const Algorithms = ({algorithm, start, setStart}) => {
       }
 
     const randomizeArray = useCallback(() => {
-        let elements = 43;
+        let elements = 100;
 
         let arr = [];
 
@@ -116,7 +116,7 @@ const Algorithms = ({algorithm, start, setStart}) => {
                     return(
                         // <div style={{content:'', height:`${n * 10}px`, width:"10px", background:(n===index)?"#AA4A44":"#282c34"}}></div>
                         // <div style={{content:'', height:`${n.val * 10}px`, width:"10px", background:isDone?"#AA4A44":n.color}}></div>
-                        <div key={i} style={{content:'', height:`${n.val * 0.5}rem`, width:"10px", background:(n.val - 1)===i?"#AA4A44":n.color}}></div>
+                        <div key={i} style={{content:'', height:`${n.val * 0.2}rem`, width:"10px", background:(n.val - 1)===i?"#AA4A44":n.color}}></div>
 
                     );
                 })}
