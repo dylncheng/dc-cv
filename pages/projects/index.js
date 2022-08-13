@@ -36,8 +36,8 @@ const theme = createTheme({
 
   theme.typography.h3 = {
     fontFamily: 'Bogart',
-    fontWeight: 400,
-    fontSize: '1.7rem'
+    fontWeight: 300,
+    fontSize: '1.5rem'
   }
 
 export default function Projects() {
@@ -96,19 +96,25 @@ export default function Projects() {
                                                 </CardHeader>
                                                 <CardContent>
                                                     <Box display="flex" flexDirection='column' alignItems="center">
-                                                        <Box maxWidth="90%" display="flex" justifyContent="center">
-                                                            <div>
-                                                                <a href={project.link?project.link:project.github} target="_blank" rel="noreferrer">
-                                                                    <Image 
-                                                                        src={project.image} 
-                                                                        placeholder="blur"
-                                                                        loading="lazy"
-                                                                        objectFit="cover"
-                                                                    >
-                                                                    </Image>
-                                                                </a>
-                                                            </div>
-                                                        </Box>
+                                                        <Grid container maxWidth="90%">
+                                                            <Grid container item xs={12} justifyContent={{md:"space-around"}} rowSpacing={{sm:4, md:0}}>
+                                                                <Grid item md={7} sm={12}>
+                                                                    <a href={project.link?project.link:project.github} target="_blank" rel="noreferrer">
+                                                                        <Image 
+                                                                            src={project.image} 
+                                                                            placeholder="blur"
+                                                                            loading="lazy"
+                                                                            objectFit="cover"
+                                                                        >
+                                                                        </Image>
+                                                                    </a>
+                                                                </Grid>
+                                                                <Grid md={4} sm={12}>
+                                                                    <Typography color="secondary">{project.description}</Typography>
+                                                                </Grid>
+
+                                                            </Grid>
+                                                        </Grid>
                                                     </Box>
                                                 </CardContent>
                                             </Card>
