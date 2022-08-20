@@ -114,8 +114,6 @@ const Algorithms = ({algorithm, start, setStart}) => {
             <div className="rectangles">
                 {nArr.map((n, i) => {
                     return(
-                        // <div style={{content:'', height:`${n * 10}px`, width:"10px", background:(n===index)?"#AA4A44":"#282c34"}}></div>
-                        // <div style={{content:'', height:`${n.val * 10}px`, width:"10px", background:isDone?"#AA4A44":n.color}}></div>
                         <div key={i} style={{content:'', height:`${n.val * 0.2}rem`, width:"10px", background:(n.val - 1)===i?"#AA4A44":n.color}}></div>
 
                     );

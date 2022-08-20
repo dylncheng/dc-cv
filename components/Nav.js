@@ -9,9 +9,6 @@ const Nav = (props) => {
                      <li key={index}><a href="#" onClick={() => props.handleSortClick(algorithm)}>{algorithm}</a></li>
                     );
                 })}
-                {/* <li><a href="#">buble</a></li>
-                <li><a href="#">quick</a></li>
-                <li><a href="#">insertion</a></li> */}
             </ul>
         </div>
     );
