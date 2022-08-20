@@ -1,6 +1,6 @@
 import { Grid, Link, Typography } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
-import { HomeMaxRounded, NightShelterRounded } from '@mui/icons-material';
+import { NightShelterRounded } from '@mui/icons-material';
 
 export default function NavCV() {
     const theme = useTheme()

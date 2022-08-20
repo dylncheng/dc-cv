@@ -5,6 +5,7 @@ import Head from "next/head";
 import { data } from "../../data";
 import styles from "../../styles/Projects.module.css"
 import HomeButton from "../../components/HomeButton";
+import NavCV from "../../components/NavCV";
 import { fontSize } from "@mui/system";
 
 const theme = createTheme({
