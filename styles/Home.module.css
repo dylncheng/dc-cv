@@ -111,9 +111,16 @@
   margin-left: 0.5rem;
 }
 
+.arrow {
+  position: absolute;
+  top: 58vh;
+  color: #f4f3ee;
+}
+
 .home-link {
   z-index: 10;
 }
+
 
 
 @media (max-width: 600px) {

@@ -1,8 +1,7 @@
 import { Typography, Box, Button } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { ArrowDropUp, ArrowUpward, Straight } from '@mui/icons-material';
+import { Straight } from '@mui/icons-material';
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css'
@@ -89,16 +88,12 @@ export default function Home() {
                   display:titleHover?'inline-block':'inline', 
                   height:titleHover?'fit-content':'auto', 
                   width:titleHover?'fit-content':'auto', 
-                  margin:0,
                   position:titleHover?'relative':'static', 
                   top:titleHover?`${Math.log(1 + Math.log(1 + (animationTime/ANIMATION_DURATION)*20))*positionArr[index][0]*0.35}%`:'auto', 
                   left:titleHover?`${Math.log(1 + Math.log(1 + (animationTime/ANIMATION_DURATION)*20))*positionArr[index][1]*0.35}%`:'auto',  
-                  transformBox: 'fill-box',
                   transform: titleHover?`rotate(${360*Math.log(1 + animationTime/ANIMATION_DURATION + positionArr[index][0]*0.7)}deg)`:'initial',
                   opacity: `${0.85 - (animationTime/ANIMATION_DURATION)*0.8}`,
-                  color: '#f4f3ee',
-                  fontFamily: 'Bogart',
-                  fontWeight: 900
+                  transformBox: 'fill-box'
                 }}
               >
                 {char}
@@ -110,30 +105,37 @@ export default function Home() {
         {
           !titleHover && 
           <>
-            <Straight sx={{position:"absolute", top:"58vh", color:"#f4f3ee"}}></Straight>
+            <Straight className={styles['arrow']}></Straight>
             <Typography ><span className='grow desktop'>{"hover to start"}</span></Typography>
             <Typography ><span className='grow mobile'>{"tap to start"}</span></Typography>
           </>
         }
         <ThemeProvider theme={theme}>
-          <Box position='absolute' top='65%' left='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+          <Box position='absolute' top='75%' left='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
             <Button className={styles['home-link']} variant='outlined' color='primary'>
               <Link href="/projects">
                   Projects
               </Link>
             </Button>
           </Box>
-          <Box position='absolute' top='45%' right='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+          <Box position='absolute' top='55%' right='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
             <Button className={styles['home-link']} variant='outlined' color='primary'>
               <Link href="/contact">
                 Contact
               </Link>
             </Button>
           </Box>
-          <Box position='absolute' top='25%' left='30%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+          <Box position='absolute' top='35%' left='30%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
             <Button className={styles['home-link']} variant='outlined' color='primary'>
               <Link href="/about">
                 About
+              </Link>
+            </Button>
+          </Box>
+          <Box position='absolute' top='15%' right='30%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
+            <Button className={styles['home-link']} variant='outlined' color='primary'>
+              <Link href="/Dylan_Cheng_Resume.pdf" download>
+                Resume
               </Link>
             </Button>
           </Box>

@@ -6,6 +6,7 @@ import Head from "next/head";
 import Image from "next/image";
 import me from "../../public/me.jpeg"
 import HomeButton from "../../components/HomeButton";
+import NavCV from "../../components/NavCV";
 import styles from "../../styles/About.module.css"
 
 const theme = createTheme({
@@ -74,8 +75,8 @@ export default function About() {
               <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={styles.main}>
-              <HomeButton></HomeButton>
-              <Box maxWidth="80%" height="100%">
+              <NavCV></NavCV>
+              <Box maxWidth="80%" height="100%" sx={{mt:"3%"}}>
                 <Grid container rowSpacing={5} justifyContent="center">
                   <Grid container item xs={12} justifyContent='center'>
                     <Grid container item lg={4} sm={6} xs={12} flexDirection='column' justifyContent={{ xs:'center' }}>

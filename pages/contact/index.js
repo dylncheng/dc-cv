@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import styles from '../../styles/Contact.module.css'
 import HomeButton from "../../components/HomeButton";
 import Head from "next/head";
+import NavCV from "../../components/NavCV";
 
 const theme = createTheme({
   palette: {
@@ -42,8 +43,8 @@ export default function Contact() {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <main>
+            <NavCV></NavCV>
             <div className={styles['container']}>
-              <HomeButton></HomeButton>
               <Box className={styles['contact']} width="100%" height="100%" minHeight="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
                   <Typography variant="h1" color="primary" className={styles['title']}>Links</Typography>
                   <Grid container maxWidth="40%" justifyContent="center" className={styles['links']}>

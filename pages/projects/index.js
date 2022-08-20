@@ -51,7 +51,7 @@ export default function Projects() {
             </Head>
             <main className={styles['main']}>
                 <ThemeProvider theme={theme}>
-                    <HomeButton></HomeButton>
+                    <NavCV></NavCV>
                     <Typography variant="h1" color="primary"> Projects</Typography>
            
                     <Grid 
@@ -109,7 +109,7 @@ export default function Projects() {
                                                                         </Image>
                                                                     </a>
                                                                 </Grid>
-                                                                <Grid md={4} sm={12}>
+                                                                <Grid item md={4} sm={12}>
                                                                     <Typography color="secondary">{project.description}</Typography>
                                                                 </Grid>
 
