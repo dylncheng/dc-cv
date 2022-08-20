@@ -53,8 +53,7 @@ export default function Projects() {
             <main className={styles['main']}>
                 <ThemeProvider theme={theme}>
                     <NavCV></NavCV>
-                    <Typography variant="h1" color="primary"> Projects</Typography>
-           
+                    <Typography variant="h1" color="primary" mt="5%"> Projects</Typography>           
                     <Grid 
                         container
                         rowSpacing={11}

@@ -1,13 +1,19 @@
-import { Grid, Link, Typography } from "@mui/material";
+import { Grid, Link, SpeedDial, SpeedDialAction, SpeedDialIcon, Typography } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
-import { NightShelterRounded } from '@mui/icons-material';
+import { Add, NightShelterRounded, Person, Work } from '@mui/icons-material';
+
+const actions = [
+    { icon: <NightShelterRounded fontSize="small"/>, name: 'Home' },
+    { icon: <Person fontSize="small"/>, name: 'About' },
+    { icon: <Work fontSize="small"/>, name: 'Projects' },
+  ];
 
 export default function NavCV() {
     const theme = useTheme()
 
     return(
         <Grid container position="absolute" top={0} padding="1.5rem" width="100%">
-            <Grid container item xs={7} flexDirection="row" justifyContent="space-around" style={{maxWidth:'25%'}}>
+            <Grid container item xs={12} flexDirection="row" justifyContent="space-around" sx={{ flexWrap:"no-wrap" }} maxWidth={{xs:'45%', sm:'35%', md:'25%'}} display={{xs:'none', sm:'flex'}}>
                 <Grid item>
                     <Link href="/about"><Typography theme={theme}>About</Typography></Link>
                 </Grid>
@@ -18,9 +24,36 @@ export default function NavCV() {
                     <Link href="/contact"><Typography theme={theme}>Contact</Typography></Link>
                 </Grid>           
             </Grid>
-            <Link href="/">
-                <NightShelterRounded sx={{position:"absolute", right:0, left:0, width:'100%'}} color="primary" fontSize="large"></NightShelterRounded>
-            </Link>
+            <Grid container item>
+                <Grid item display={{xs:'none', sm:'block'}}>
+                    <Link href="/">
+                        <NightShelterRounded sx={{position:"absolute", top:'1rem', width:'100%', height:'3rem'}} color="primary" fontSize="large"></NightShelterRounded>
+                    </Link>
+                </Grid>
+                <Grid item display={{xs:'block', sm:'none'}}>
+                    <SpeedDial
+                    icon={<Add />}
+                    direction="right"
+                    ariaLabel="SpeedDial playground example"
+                    style={{
+                        position:"fixed",
+                        left:"1rem",
+                        top:"1rem"
+
+                    }}
+                    >
+                        {actions.map((action) => (
+                            <SpeedDialAction
+                                key={action.name}
+                                icon={action.icon}
+                                tooltipTitle={action.name}
+                            />
+                        ))}
+
+                    </SpeedDial>
+                </Grid>
+
+            </Grid>
         </Grid>
     );
 }
