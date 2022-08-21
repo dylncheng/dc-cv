@@ -1,11 +1,12 @@
 import { Grid, Link, SpeedDial, SpeedDialAction, SpeedDialIcon, Typography } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
-import { Add, NightShelterRounded, Person, Work } from '@mui/icons-material';
+import { Add, Email, NightShelterRounded, Person, Work } from '@mui/icons-material';
 
 const actions = [
-    { icon: <NightShelterRounded fontSize="small"/>, name: 'Home' },
-    { icon: <Person fontSize="small"/>, name: 'About' },
-    { icon: <Work fontSize="small"/>, name: 'Projects' },
+    { icon: <Link href="/"><NightShelterRounded fontSize="small"/></Link>, name: 'Home' },
+    { icon: <Link href="/about"><Person fontSize="small"/></Link>, name: 'About' },
+    { icon: <Link href="/contact"><Email fontSize="small"/></Link>, name: 'Contact' },
+    { icon: <Link href="/projects"><Work fontSize="small"/></Link>, name: 'Projects' },
   ];
 
 export default function NavCV() {
