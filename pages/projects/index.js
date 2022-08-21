@@ -50,9 +50,9 @@ export default function Projects() {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={styles['main']}>
-                <ThemeProvider theme={theme}>
-                    <NavCV></NavCV>
+            <ThemeProvider theme={theme}>
+                <NavCV></NavCV>
+                <main className={styles['main']}>
                     <Typography variant="h1" color="primary" mt="5%"> Projects</Typography>           
                     <Grid 
                         container
@@ -124,8 +124,8 @@ export default function Projects() {
                             })
                         }
                     </Grid>
-                </ThemeProvider>
-            </main>
+                </main>
+            </ThemeProvider>
         </>
     )
 }

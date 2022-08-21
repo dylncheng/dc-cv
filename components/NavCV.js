@@ -13,7 +13,7 @@ export default function NavCV() {
     const theme = useTheme()
 
     return(
-        <Grid container position="absolute" top={0} padding="1.5rem" width="100%">
+        <Grid container className="nav-cv" backgroundColor={{sm:"rgb(70,63,58,0.6)"}}>
             <Grid container item xs={12} flexDirection="row" justifyContent="space-around" sx={{ flexWrap:"no-wrap" }} maxWidth={{xs:'45%', sm:'35%', md:'25%'}} display={{xs:'none', sm:'flex'}}>
                 <Grid item>
                     <Link href="/about"><Typography theme={theme}>About</Typography></Link>
@@ -34,7 +34,7 @@ export default function NavCV() {
                 <Grid item display={{xs:'block', sm:'none'}}>
                     <SpeedDial
                     icon={<Add />}
-                    direction="right"
+                    direction="down"
                     ariaLabel="SpeedDial playground example"
                     style={{
                         position:"fixed",
