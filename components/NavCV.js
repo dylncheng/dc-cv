@@ -3,10 +3,10 @@ import { useTheme } from '@mui/material/styles';
 import { Add, Email, NightShelterRounded, Person, Work } from '@mui/icons-material';
 
 const actions = [
-    { icon: <Link href="/"><NightShelterRounded fontSize="small"/></Link>, name: 'Home' },
-    { icon: <Link href="/about"><Person fontSize="small"/></Link>, name: 'About' },
-    { icon: <Link href="/contact"><Email fontSize="small"/></Link>, name: 'Contact' },
-    { icon: <Link href="/projects"><Work fontSize="small"/></Link>, name: 'Projects' },
+    { icon: <Link href="/"><NightShelterRounded color="secondary" fontSize="small"/></Link>, name: 'Home' },
+    { icon: <Link href="/about"><Person color="secondary" fontSize="small"/></Link>, name: 'About' },
+    { icon: <Link href="/contact"><Email color="secondary" fontSize="small"/></Link>, name: 'Contact' },
+    { icon: <Link href="/projects"><Work color="secondary" fontSize="small"/></Link>, name: 'Projects' },
   ];
 
 export default function NavCV() {

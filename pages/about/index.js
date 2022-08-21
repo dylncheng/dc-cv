@@ -87,7 +87,7 @@ export default function About() {
                         <Typography variant='h6' color="secondary" marginBottom="2.5rem" textAlign={{xs:'center', sm:'left'}}> Hi, I&apos;m <Typography variant="strong">Dylan</Typography>—a <Typography variant="strong">Computer Engineering</Typography> student at the <Typography variant="strong">University of Toronto</Typography></Typography>
                       </Grid>
                     </Grid>
-                    <Grid item className={styles['photo']} xl={3} lg={4} sm={6} xs={12} marginLeft={{sm:"1rem"}} textAlign="right">
+                    <Grid item className={styles['photo']} xl={3} lg={4} sm={6} xs={12} marginLeft={{sm:"2rem"}} textAlign="right">
                       <Image src={me} layout="intrinsic" height="532" width="400" style={{borderRadius: '10px'}}></Image>
                     </Grid>
                   </Grid>
