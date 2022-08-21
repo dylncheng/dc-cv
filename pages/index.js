@@ -112,32 +112,32 @@ export default function Home() {
         }
         <ThemeProvider theme={theme}>
           <Box position='absolute' top='75%' left='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
-            <Button className={styles['home-link']} variant='outlined' color='primary'>
-              <Link href="/projects">
+            <Link href="/projects">
+              <Button className={styles['home-link']} variant='outlined' color='primary'>
                   Projects
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </Box>
           <Box position='absolute' top='55%' right='20%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
-            <Button className={styles['home-link']} variant='outlined' color='primary'>
-              <Link href="/contact">
+            <Link href="/contact">
+              <Button className={styles['home-link']} variant='outlined' color='primary'>
                 Contact
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </Box>
           <Box position='absolute' top='35%' left='30%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
-            <Button className={styles['home-link']} variant='outlined' color='primary'>
-              <Link href="/about">
+            <Link href="/about">
+              <Button className={styles['home-link']} variant='outlined' color='primary'>
                 About
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </Box>
           <Box position='absolute' top='15%' right='30%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
-            <Button className={styles['home-link']} variant='outlined' color='primary'>
-              <Link href="/Dylan_Cheng_Resume.pdf" download>
+            <Link href="/Dylan_Cheng_Resume.pdf" download>
+              <Button className={styles['home-link']} variant='outlined' color='primary'>
                 Resume
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </Box>
         </ThemeProvider>
       </main>

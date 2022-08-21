@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Box, Card, CardContent, CardHeader, Grid, Typography } from "@mui/material"
+import { Box, Card, CardContent, CardHeader, Grid, Link, Typography } from "@mui/material"
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Head from "next/head";
 import { data } from "../../data";
@@ -7,6 +7,7 @@ import styles from "../../styles/Projects.module.css"
 import HomeButton from "../../components/HomeButton";
 import NavCV from "../../components/NavCV";
 import { fontSize } from "@mui/system";
+import { GitHub, Preview } from "@mui/icons-material";
 
 const theme = createTheme({
     palette: {
@@ -111,6 +112,16 @@ export default function Projects() {
                                                                 </Grid>
                                                                 <Grid item md={4} sm={12}>
                                                                     <Typography color="secondary">{project.description}</Typography>
+                                                                    <Box display="flex" width="100%" justifyContent="space-around" padding="10%">
+                                                                        {
+                                                                            project.link && 
+                                                                            <Link href={project.link} target="_blank" rel="noreferrer"><Preview fontSize="large"></Preview></Link>
+                                                                        }
+                                                                        {
+                                                                            project.github && 
+                                                                            <Link href={project.github} target="_blank" rel="noreferrer"><GitHub fontSize="large"></GitHub></Link>
+                                                                        }
+                                                                    </Box>
                                                                 </Grid>
 
                                                             </Grid>
