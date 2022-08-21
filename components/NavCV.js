@@ -1,6 +1,7 @@
 import { Grid, Link, SpeedDial, SpeedDialAction, SpeedDialIcon, Typography } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
-import { Add, Email, NightShelterRounded, Person, Work } from '@mui/icons-material';
+import { Add, Email, NightShelterRounded, Person, Remove, Work } from '@mui/icons-material';
+import { useState } from "react";
 
 const actions = [
     { icon: <Link href="/"><NightShelterRounded color="secondary" fontSize="small"/></Link>, name: 'Home' },
@@ -10,6 +11,7 @@ const actions = [
   ];
 
 export default function NavCV() {
+    const [navOpen, setNavOpen] = useState(false)
     const theme = useTheme()
 
     return(
@@ -33,9 +35,11 @@ export default function NavCV() {
                 </Grid>
                 <Grid item display={{xs:'block', sm:'none'}}>
                     <SpeedDial
-                    icon={<Add />}
+                    icon={navOpen?<Remove />:<Add />}
                     direction="down"
                     ariaLabel="SpeedDial playground example"
+                    onOpen={() => setNavOpen(true)}
+                    onClose={() => setNavOpen(false)}
                     style={{
                         position:"fixed",
                         left:"1rem",
