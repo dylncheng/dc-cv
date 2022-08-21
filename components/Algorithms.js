@@ -25,7 +25,7 @@ const Algorithms = ({algorithm, start, setStart}) => {
 
 
     // let nArr = useMemo(() => randomizeArray(),[randomizeArray]);
-    const [nArr, setNArr] = useState(() => randomizeArray())
+    const [nArr, setNArr] = useState([])
 
 
     const handleReset = () => {
@@ -82,6 +82,11 @@ const Algorithms = ({algorithm, start, setStart}) => {
         setIsDone(true);
         setStart(false);
     }, [nArr, setIsDone, setStart])
+
+
+    useEffect(() => {
+        setNArr(randomizeArray());
+    }, [])
 
 
     useEffect(() => {
