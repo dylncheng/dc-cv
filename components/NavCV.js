@@ -16,7 +16,7 @@ export default function NavCV() {
 
     return(
         <Grid container className="nav-cv" backgroundColor={{sm:"rgb(70,63,58,0.6)"}}>
-            <Grid container item xs={12} flexDirection="row" justifyContent="space-around" sx={{ flexWrap:"no-wrap" }} maxWidth={{xs:'45%', sm:'35%', md:'25%'}} display={{xs:'none', sm:'flex'}}>
+            <Grid container item xs={12} flexDirection="row" justifyContent="space-around" sx={{ flexWrap:"no-wrap" }} maxWidth={{xs:'45%', sm:'35%', md:'25%'}} display={{xs:'none', sm:'flex'}} zIndex={2}>
                 <Grid item>
                     <Link href="/about"><Typography theme={theme}>About</Typography></Link>
                 </Grid>
@@ -30,7 +30,7 @@ export default function NavCV() {
             <Grid container item>
                 <Grid item display={{xs:'none', sm:'block'}}>
                     <Link href="/">
-                        <NightShelterRounded sx={{position:"absolute", top:'1rem', width:'100%', height:'3rem'}} color="primary" fontSize="large"></NightShelterRounded>
+                        <NightShelterRounded sx={{position:"absolute", top:'1rem', width:'100%', height:'3rem', zIndex:1}} color="primary" fontSize="large"></NightShelterRounded>
                     </Link>
                 </Grid>
                 <Grid item display={{xs:'block', sm:'none'}}>
