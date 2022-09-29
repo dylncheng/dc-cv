@@ -13,7 +13,7 @@ I wanted to implement this idea enough to create a new one.
 
 
 ### The Animation
-... in progress ...
+... description in progress ...
 
 First, run the development server:
 
