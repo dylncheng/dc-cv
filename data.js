@@ -28,7 +28,7 @@ let data = {
             description: "A C++ project using OSM and GTK with implementation of A*, Multi-Dijktra, and clustering algorithms for path finding and map visualization.",
             image: mapper,
             github:"",
-            link: ""
+            link: "https://gitfront.io/r/dividividib/UkY4B3JybKy6/StudentLifeMap/"
         },
         {
             name: "Silverman chess",
