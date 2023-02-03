@@ -4,7 +4,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { fontFamily, fontWeight } from "@mui/system";
 import Head from "next/head";
 import Image from "next/image";
-import me from "../../public/me.jpeg"
+import me from "../../public/me.JPG"
 import HomeButton from "../../components/HomeButton";
 import NavCV from "../../components/NavCV";
 import styles from "../../styles/About.module.css"
