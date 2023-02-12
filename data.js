@@ -46,7 +46,7 @@ let data = {
         },
         {
             name: "Recipe API",
-            description: "A recipe API created as an exercise to be able to implement REST priciples for a large amount of data. The API interacts with a database with over 200,000 recipes, which were parsed from a CSV file.",
+            description: "A recipe API created as an exercise to be able to implement REST principles for a large amount of data. The API interacts with a database with over 200,000 recipes, which were parsed from a CSV file.",
             image: recipe,
             github:"https://github.com/dylncheng/recipeAPI",
             link: ""
