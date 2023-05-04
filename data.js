@@ -10,6 +10,13 @@ import dcCV from '/public/dc-cv.png'
 let data = {
     projects:  [
         {
+            name: "Student Life Mapper",
+            description: "A C++ project using OSM and GTK with implementation of A*, Multi-Dijktra, and clustering algorithms for path finding and map visualization.",
+            image: mapper,
+            github:"https://gitfront.io/r/dividividib/UkY4B3JybKy6/StudentLifeMap/",
+            link: ""
+        },
+        {
             name: "Spacestagram",
             description: "A mock social media platform created using the NASA Mars Rover API",
             image: spacestagram,
@@ -21,13 +28,6 @@ let data = {
             description: "Why make another portfolio website when you already have one? For fun, of course. This portfolio website was based on a single idea I had about my name exploding. What better way to test my skills in React animations?",
             image: dcCV,
             github:"https://github.com/dylncheng/dc-cv",
-            link: ""
-        },
-        {
-            name: "OSM Mapper",
-            description: "A C++ project using OSM and GTK with implementation of A*, Multi-Dijktra, and clustering algorithms for path finding and map visualization.",
-            image: mapper,
-            github:"https://gitfront.io/r/dividividib/UkY4B3JybKy6/StudentLifeMap/",
             link: ""
         },
         {
