@@ -35,7 +35,7 @@ let data = {
             description: "A chess game written with C assembly-level programming, and using interrupts for keyboard input in conjunction with double-buffering for the graphical interface",
             image: chess,
             github:"https://github.com/chris-jpark/SilvermanChess_FPGA",
-            link: "https://dylncheng.github.io/spacestagram/"
+            link: ""
         },
         {
             name: "Yuki Weather App",
