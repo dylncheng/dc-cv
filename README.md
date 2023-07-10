@@ -11,10 +11,6 @@ I wanted to implement this idea enough to create a new one.
 3. Material UI
 4. Deployed on Vercel
 
-
-### The Animation
-... description in progress ...
-
 First, run the development server:
 
 ```bash
