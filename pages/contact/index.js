@@ -53,7 +53,7 @@ export default function Contact() {
                         <Typography variant='h6' color='secondary'><a href={"mailto:chengdylan02@gmail.com"} target="_blank" rel="noreferrer"><MailOutline fontSize="large"></MailOutline></a></Typography>
                       </Grid>
                       <Grid item xs={4} textAlign="center">
-                        <Typography variant='h6' color='secondary'><a href={"https://linkedin.com/in/dylnchng"} target="_blank" rel="noreferrer"><LinkedIn fontSize="large"></LinkedIn></a></Typography>
+                        <Typography variant='h6' color='secondary'><a href={"https://linkedin.com/in/dylncheng"} target="_blank" rel="noreferrer"><LinkedIn fontSize="large"></LinkedIn></a></Typography>
                       </Grid>
                       <Grid item xs={4} textAlign="center">
                         <Typography variant='h6' color='secondary'><a href={"https://github.com/dylncheng"} target="_blank" rel="noreferrer"><GitHub fontSize="large"></GitHub></a></Typography>
