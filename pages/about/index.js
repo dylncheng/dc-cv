@@ -59,7 +59,7 @@ const aboutObj = {
   "As terrible and traumatizing as it was, the first thing I thought of to achieve this design was linear algebra. \n" + 
   "As for the effect of exploding letters, at the time I didn't expect to be writing a log-log function to model the behaviour I wanted. \n" +
   "Nevertheless, my effort in building a pure React animation hopefully paid off. Some extra things I didn't write about: (pseudo-random position generation & animation timing)\n",
-  aboutMe: "I'm a programmer with experice in multi-threaded and distributed system development. " +
+  aboutMe: "I'm a programmer with experience in multi-threaded and distributed system development. " +
   "I enjoy spending time constantly improving on my programming skills, and playing music in my spare time."
 
 }
