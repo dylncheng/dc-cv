@@ -59,11 +59,17 @@ export default function Home() {
     else if(titleHover) {
       clearTimeout(delay);
     }
-
-    window.sessionStorage.setItem('titleHover', JSON.stringify(titleHover));
-    window.sessionStorage.setItem('animationTime', JSON.stringify(animationTime))
-    
   }, [titleHover, animationTime])
+
+  useEffect(() => {
+    if (animationTime >= ANIMATION_DURATION) {
+      window.sessionStorage.setItem('animationTime', JSON.stringify(animationTime))
+    }
+  }, [animationTime])
+
+  useEffect(() => {
+    window.sessionStorage.setItem('titleHover', JSON.stringify(titleHover));    
+  }, [titleHover])
 
   return (
     <div className={styles.container}>
@@ -133,7 +139,7 @@ export default function Home() {
             </Link>
           </Box>
           <Box position='absolute' top='15%' right='30%' display={((animationTime/ANIMATION_DURATION) < 0.15)?'none':'block'}>
-            <Link href="/Dylan_Cheng_Resume.pdf" download>
+            <Link href="/Dylan_Cheng_resume.pdf" download>
               <Button className={styles['home-link']} variant='outlined' color='primary'>
                 Resume
               </Button>
@@ -141,37 +147,6 @@ export default function Home() {
           </Box>
         </ThemeProvider>
       </main>
-
-      {/* <footer className={styles.footer}>
-      </footer> */}
     </div>
   )
 }
-
-// top={titleHover?`${Math.random()*100}%`:'auto'} left={titleHover?`${Math.random()*100}%`:'auto'}
-{/* <h1 
-  key={index}
-  style={{
-    display:'inline', 
-    height:titleHover?'fit-content':'auto', 
-    position:titleHover?'relative':'static', 
-    top:titleHover?`${Math.log(1 + Math.log(1 + (animationTime/ANIMATION_DURATION)*20))*positionArr[index][0]*0.2}%`:'auto', 
-    left:titleHover?`${Math.log(1 + Math.log(1 + (animationTime/ANIMATION_DURATION)*20))*positionArr[index][0]*0.2}%`:'auto',  
-  }}
->
-  {char}
-</h1> */}
-
-{/* <Typography 
-  key={index} 
-  display='inline' 
-  variant='h1' 
-  height={titleHover?'fit-content':'auto'} 
-  position={titleHover?'relative':'static'} 
-  top={titleHover?`${Math.log(1 + Math.log(1 + (animationTime/ANIMATION_DURATION)*20))*positionArr[index][0]*0.2}%`:'auto'} 
-  left={titleHover?`${Math.log(1 + Math.log(1 + (animationTime/ANIMATION_DURATION)*20))*positionArr[index][0]*0.2}%`:'auto'}                  
->
-    {char}
-</Typography> */}
-
-// height={titleHover?'100%':'fit-content'} display={titleHover?'flex':'block'} alignItems='center' justifyContent='center'

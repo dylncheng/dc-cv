@@ -3,12 +3,19 @@ import yuki from './public/yuki.png'
 import recipe from './public/recipe.png'
 import spacestagram from './public/spacestagram-landing.png'
 import mapper from './public/mapper.png'
+import parla from './public/parla.png'
 import chess from './public/chess.png'
 import algorithmVisualization from '/public/algorithms.png'
 import dcCV from '/public/dc-cv.png'
 
 let data = {
     projects:  [
+        {
+            name: "Parla Chat",
+            description: "An AI companion hosted on AWS, and leveraging Google Cloud STT, that provides feedback on oral skills in 6 languages.",
+            image: parla,
+            github: "https://github.com/kimhbryan/parla/tree/main"
+        },
         {
             name: "Student Life Mapper",
             description: "A C++ project using OSM and GTK with implementation of A*, Multi-Dijktra, and clustering algorithms for path finding and map visualization.",
@@ -42,7 +49,6 @@ let data = {
             description: "A weather app created with the purpose of being minimalistic and accessible. ",
             image: yuki,
             github:"https://github.com/dylncheng/weather-app-new",
-            link: "https://weather-app-newest.herokuapp.com/"
         },
         {
             name: "Recipe API",
